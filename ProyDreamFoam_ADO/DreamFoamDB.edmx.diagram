@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="689f94323509404cb3d19420fbe6f095" Name="Diagram1" ZoomLevel="91">
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_Area" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_Calendario2024" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_Cargo" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_Diario" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_Documento" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_Empleado" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_Feriados" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_Horario" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_Marcas" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_Sede" Width="1.5" PointX="0.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamFoam_DBModel.Tb_UserSystem" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="DreamFoam_DBModel.FK__Tb_Emplea__codAr__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamFoam_DBModel.FK__Tb_Emplea__codCa__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamFoam_DBModel.FK__Tb_Diario__emple__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamFoam_DBModel.FK__Tb_Emplea__tipoD__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamFoam_DBModel.FK__Tb_Emplea__codHo__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamFoam_DBModel.FK__Tb_Emplea__codSe__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamFoam_DBModel.FK__Tb_Marcas__emple__49C3F6B7" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

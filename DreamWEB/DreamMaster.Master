@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DreamMaster.master.cs" Inherits="DreamWEB.DreamMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+     <%--<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>--%>  
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="/Content/bootstrap.css" />
+    <link rel="stylesheet" href="/CSS/SideBarStyle.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="/CSS/GeneralStyle.css" />
+    
+ 
+   
+
+</head>
+<body id="body-pd" style="background: #F4F7FD;">
+    <form id="form1" runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="True"></asp:ScriptManager>
+        <div>
+              
+           <header class="header" id="header">
+                <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+                
+            </header>
+             <div class="l-navbar" id="nav-bar">
+             <nav class="nav">
+                <div> 
+                    <a class="nav_logo" style="padding-left: 15px;">
+                        <img src="/FotosTemp/dreamLogo3W20x20.png"/>
+                        <!--<i class='bx bx-layer nav_logo-icon'></i>--> 
+                        <span class="nav_logo-name" style="font-family: 'Copperplate Gothic';">Dream Foam</span>
+                    </a>
+                     <div class="nav_list"> 
+                         <asp:HyperLink  ID="linkPrincipal" runat="server" CssClass="a nav_link active" NavigateUrl="~/DreamMasterPages/DreamPrincipal.aspx">
+                             <i class='bx bx-grid-alt nav_icon'></i> 
+                             <span class="nav_name">Principal</span>
+                         </asp:HyperLink>
+                          <asp:HyperLink  ID="linkGeneral" runat="server" CssClass="a nav_link" NavigateUrl="~/DreamMasterPages/DreamConsGeneral.aspx">
+                             <i class='bx bxs-user-account'></i>  
+                             <span class="nav_name">Consulta General</span> 
+                         </asp:HyperLink>
+                         <!--
+                         <a href="#" class="nav_link">
+                             <i class='bx bx-message-square-detail nav_icon'></i>
+                             <span class="nav_name">Messages</span> 54; 81; 103
+                         </a>--> 
+                          <asp:HyperLink  ID="linkIndividual" runat="server" CssClass="a nav_link" NavigateUrl="~/DreamMasterPages/DreamConsEmpleado.aspx">
+                             <i class='bx bx-user nav_icon'></i>
+                             <span class="nav_name">Consulta Individual</span> 
+                          </asp:HyperLink>
+                         <!--
+                         <a href="#" class="nav_link">
+                             <i class='bx bx-folder nav_icon'></i>
+                             <span class="nav_name">Files</span>
+                         </a>-->
+                        <asp:HyperLink  ID="linkMetricas" runat="server" CssClass="a nav_link" NavigateUrl="~/DreamMasterPages/DreamMetricas.aspx">
+                             <i class='bx bx-bar-chart-alt-2 nav_icon'></i
+                             <span class="nav_name">Metricas</span> 
+                         </asp:HyperLink>
+                     </div>
+                </div> 
+                    <asp:HyperLink  ID="linkLogin" runat="server" CssClass="a nav_link" NavigateUrl="~/Login.aspx">
+                        <i class='bx bx-log-out nav_icon'></i> 
+                        <span class="nav_name">Salir</span>
+                    </asp:HyperLink>
+            </nav>
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="/Scripts/bootstrap.js"></script>
+   <script src="/Scripts/bootstrap.min.js"></script>
+   <script src="/JS/SideScript.js"></script>
+    <script>
+   
+</body>
+</html>

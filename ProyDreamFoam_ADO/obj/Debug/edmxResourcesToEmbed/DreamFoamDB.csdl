@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DreamFoam_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Tb_Area">
+    <Key>
+      <PropertyRef Name="codArea" />
+    </Key>
+    <Property Name="codArea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomArea" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tb_Empleado" Relationship="Self.FK__Tb_Emplea__codAr__44FF419A" FromRole="Tb_Area" ToRole="Tb_Empleado" />
+  </EntityType>
+  <EntityType Name="Tb_Calendario2024">
+    <Key>
+      <PropertyRef Name="codCal" />
+    </Key>
+    <Property Name="codCal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Tb_Cargo">
+    <Key>
+      <PropertyRef Name="codCargo" />
+    </Key>
+    <Property Name="codCargo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomCargo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tb_Empleado" Relationship="Self.FK__Tb_Emplea__codCa__440B1D61" FromRole="Tb_Cargo" ToRole="Tb_Empleado" />
+  </EntityType>
+  <EntityType Name="Tb_Diario">
+    <Key>
+      <PropertyRef Name="codDiar" />
+    </Key>
+    <Property Name="codDiar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="empleado" Type="Int32" Nullable="false" />
+    <Property Name="horario" Type="Int32" Nullable="false" />
+    <Property Name="hIngreso" Type="Time" Precision="7" />
+    <Property Name="hSalida" Type="Time" Precision="7" />
+    <Property Name="hora1" Type="Time" Precision="7" />
+    <Property Name="hora2" Type="Time" Precision="7" />
+    <Property Name="hora3" Type="Time" Precision="7" />
+    <Property Name="hora4" Type="Time" Precision="7" />
+    <Property Name="ingrTard" Type="Time" Precision="7" />
+    <Property Name="exeRefr" Type="Time" Precision="7" />
+    <Property Name="exeJornd" Type="Time" Precision="7" />
+    <Property Name="observ" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="fec_Reg" Type="DateTime" Precision="3" />
+    <Property Name="usu_Reg" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fec_UltMod" Type="DateTime" Precision="3" />
+    <Property Name="usu_UltMod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tb_Empleado" Relationship="Self.FK__Tb_Diario__emple__4CA06362" FromRole="Tb_Diario" ToRole="Tb_Empleado" />
+  </EntityType>
+  <EntityType Name="Tb_Documento">
+    <Key>
+      <PropertyRef Name="codDoc" />
+    </Key>
+    <Property Name="codDoc" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descrCorta" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descrLarga" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="longitud" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tb_Empleado" Relationship="Self.FK__Tb_Emplea__tipoD__4316F928" FromRole="Tb_Documento" ToRole="Tb_Empleado" />
+  </EntityType>
+  <EntityType Name="Tb_Empleado">
+    <Key>
+      <PropertyRef Name="codEmpleado" />
+    </Key>
+    <Property Name="codEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="numroDoc" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tipoDoc" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="fecNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="genero" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="correo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="telefono" Type="Int32" />
+    <Property Name="fecIngreso" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="codCargo" Type="Int32" Nullable="false" />
+    <Property Name="codArea" Type="Int32" Nullable="false" />
+    <Property Name="codSede" Type="Int32" Nullable="false" />
+    <Property Name="codHorario" Type="Int32" Nullable="false" />
+    <Property Name="foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="fec_Reg" Type="DateTime" Precision="3" />
+    <Property Name="usu_Reg" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fec_UltMod" Type="DateTime" Precision="3" />
+    <Property Name="usu_UltMod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" />
+    <NavigationProperty Name="Tb_Area" Relationship="Self.FK__Tb_Emplea__codAr__44FF419A" FromRole="Tb_Empleado" ToRole="Tb_Area" />
+    <NavigationProperty Name="Tb_Cargo" Relationship="Self.FK__Tb_Emplea__codCa__440B1D61" FromRole="Tb_Empleado" ToRole="Tb_Cargo" />
+    <NavigationProperty Name="Tb_Diario" Relationship="Self.FK__Tb_Diario__emple__4CA06362" FromRole="Tb_Empleado" ToRole="Tb_Diario" />
+    <NavigationProperty Name="Tb_Documento" Relationship="Self.FK__Tb_Emplea__tipoD__4316F928" FromRole="Tb_Empleado" ToRole="Tb_Documento" />
+    <NavigationProperty Name="Tb_Horario" Relationship="Self.FK__Tb_Emplea__codHo__46E78A0C" FromRole="Tb_Empleado" ToRole="Tb_Horario" />
+    <NavigationProperty Name="Tb_Sede" Relationship="Self.FK__Tb_Emplea__codSe__45F365D3" FromRole="Tb_Empleado" ToRole="Tb_Sede" />
+    <NavigationProperty Name="Tb_Marcas" Relationship="Self.FK__Tb_Marcas__emple__49C3F6B7" FromRole="Tb_Empleado" ToRole="Tb_Marcas" />
+  </EntityType>
+  <EntityType Name="Tb_Feriados">
+    <Key>
+      <PropertyRef Name="codFeriado" />
+    </Key>
+    <Property Name="codFeriado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tb_Horario">
+    <Key>
+      <PropertyRef Name="codHorario" />
+    </Key>
+    <Property Name="codHorario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="desHorario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ingLUN" Type="Time" Precision="7" />
+    <Property Name="salLUN" Type="Time" Precision="7" />
+    <Property Name="ingMAR" Type="Time" Precision="7" />
+    <Property Name="salMAR" Type="Time" Precision="7" />
+    <Property Name="ingMIE" Type="Time" Precision="7" />
+    <Property Name="salMIE" Type="Time" Precision="7" />
+    <Property Name="ingJUE" Type="Time" Precision="7" />
+    <Property Name="salJUE" Type="Time" Precision="7" />
+    <Property Name="ingVIE" Type="Time" Precision="7" />
+    <Property Name="salVIE" Type="Time" Precision="7" />
+    <Property Name="ingSAB" Type="Time" Precision="7" />
+    <Property Name="salSAB" Type="Time" Precision="7" />
+    <Property Name="ingDOM" Type="Time" Precision="7" />
+    <Property Name="salDOM" Type="Time" Precision="7" />
+    <Property Name="refriger" Type="Int32" Nullable="false" />
+    <Property Name="tolernc" Type="Int32" Nullable="false" />
+    <Property Name="diaDesc" Type="Int32" Nullable="false" />
+    <Property Name="fec_Reg" Type="DateTime" Precision="3" />
+    <Property Name="usu_Reg" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fec_UltMod" Type="DateTime" Precision="3" />
+    <Property Name="usu_UltMod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tb_Empleado" Relationship="Self.FK__Tb_Emplea__codHo__46E78A0C" FromRole="Tb_Horario" ToRole="Tb_Empleado" />
+  </EntityType>
+  <EntityType Name="Tb_Marcas">
+    <Key>
+      <PropertyRef Name="codMarc" />
+    </Key>
+    <Property Name="codMarc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="empleado" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hora" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="tipo" Type="Int32" />
+    <Property Name="fec_Reg" Type="DateTime" Precision="3" />
+    <Property Name="usu_Reg" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fec_UltMod" Type="DateTime" Precision="3" />
+    <Property Name="usu_UltMod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tb_Empleado" Relationship="Self.FK__Tb_Marcas__emple__49C3F6B7" FromRole="Tb_Marcas" ToRole="Tb_Empleado" />
+  </EntityType>
+  <EntityType Name="Tb_Sede">
+    <Key>
+      <PropertyRef Name="codSede" />
+    </Key>
+    <Property Name="codSede" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomSede" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Empleado" Relationship="Self.FK__Tb_Emplea__codSe__45F365D3" FromRole="Tb_Sede" ToRole="Tb_Empleado" />
+  </EntityType>
+  <EntityType Name="Tb_UserSystem">
+    <Key>
+      <PropertyRef Name="codUser" />
+    </Key>
+    <Property Name="codUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="passUser" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estdUser" Type="Int32" Nullable="false" />
+    <Property Name="fec_Reg" Type="DateTime" Precision="3" />
+    <Property Name="usu_Reg" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fec_UltMod" Type="DateTime" Precision="3" />
+    <Property Name="usu_UltMod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__Tb_Emplea__codAr__44FF419A">
+    <End Role="Tb_Area" Type="Self.Tb_Area" Multiplicity="1" />
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Area">
+        <PropertyRef Name="codArea" />
+      </Principal>
+      <Dependent Role="Tb_Empleado">
+        <PropertyRef Name="codArea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Emplea__codCa__440B1D61">
+    <End Role="Tb_Cargo" Type="Self.Tb_Cargo" Multiplicity="1" />
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Cargo">
+        <PropertyRef Name="codCargo" />
+      </Principal>
+      <Dependent Role="Tb_Empleado">
+        <PropertyRef Name="codCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Diario__emple__4CA06362">
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="1" />
+    <End Role="Tb_Diario" Type="Self.Tb_Diario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Empleado">
+        <PropertyRef Name="codEmpleado" />
+      </Principal>
+      <Dependent Role="Tb_Diario">
+        <PropertyRef Name="empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Emplea__tipoD__4316F928">
+    <End Role="Tb_Documento" Type="Self.Tb_Documento" Multiplicity="1" />
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Documento">
+        <PropertyRef Name="codDoc" />
+      </Principal>
+      <Dependent Role="Tb_Empleado">
+        <PropertyRef Name="tipoDoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Emplea__codHo__46E78A0C">
+    <End Role="Tb_Horario" Type="Self.Tb_Horario" Multiplicity="1" />
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Horario">
+        <PropertyRef Name="codHorario" />
+      </Principal>
+      <Dependent Role="Tb_Empleado">
+        <PropertyRef Name="codHorario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Emplea__codSe__45F365D3">
+    <End Role="Tb_Sede" Type="Self.Tb_Sede" Multiplicity="1" />
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sede">
+        <PropertyRef Name="codSede" />
+      </Principal>
+      <Dependent Role="Tb_Empleado">
+        <PropertyRef Name="codSede" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Marcas__emple__49C3F6B7">
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="1" />
+    <End Role="Tb_Marcas" Type="Self.Tb_Marcas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Empleado">
+        <PropertyRef Name="codEmpleado" />
+      </Principal>
+      <Dependent Role="Tb_Marcas">
+        <PropertyRef Name="empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DreamFoam_DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tb_Area" EntityType="Self.Tb_Area" />
+    <EntitySet Name="Tb_Calendario2024" EntityType="Self.Tb_Calendario2024" />
+    <EntitySet Name="Tb_Cargo" EntityType="Self.Tb_Cargo" />
+    <EntitySet Name="Tb_Diario" EntityType="Self.Tb_Diario" />
+    <EntitySet Name="Tb_Documento" EntityType="Self.Tb_Documento" />
+    <EntitySet Name="Tb_Empleado" EntityType="Self.Tb_Empleado" />
+    <EntitySet Name="Tb_Feriados" EntityType="Self.Tb_Feriados" />
+    <EntitySet Name="Tb_Horario" EntityType="Self.Tb_Horario" />
+    <EntitySet Name="Tb_Marcas" EntityType="Self.Tb_Marcas" />
+    <EntitySet Name="Tb_Sede" EntityType="Self.Tb_Sede" />
+    <EntitySet Name="Tb_UserSystem" EntityType="Self.Tb_UserSystem" />
+    <AssociationSet Name="FK__Tb_Emplea__codAr__44FF419A" Association="Self.FK__Tb_Emplea__codAr__44FF419A">
+      <End Role="Tb_Area" EntitySet="Tb_Area" />
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Emplea__codCa__440B1D61" Association="Self.FK__Tb_Emplea__codCa__440B1D61">
+      <End Role="Tb_Cargo" EntitySet="Tb_Cargo" />
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Diario__emple__4CA06362" Association="Self.FK__Tb_Diario__emple__4CA06362">
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+      <End Role="Tb_Diario" EntitySet="Tb_Diario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Emplea__tipoD__4316F928" Association="Self.FK__Tb_Emplea__tipoD__4316F928">
+      <End Role="Tb_Documento" EntitySet="Tb_Documento" />
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Emplea__codHo__46E78A0C" Association="Self.FK__Tb_Emplea__codHo__46E78A0C">
+      <End Role="Tb_Horario" EntitySet="Tb_Horario" />
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Emplea__codSe__45F365D3" Association="Self.FK__Tb_Emplea__codSe__45F365D3">
+      <End Role="Tb_Sede" EntitySet="Tb_Sede" />
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Marcas__emple__49C3F6B7" Association="Self.FK__Tb_Marcas__emple__49C3F6B7">
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+      <End Role="Tb_Marcas" EntitySet="Tb_Marcas" />
+    </AssociationSet>
+    <FunctionImport Name="usp_ActualizarDiario">
+      <Parameter Name="codDiar" Mode="In" Type="Int32" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="empleado" Mode="In" Type="Int32" />
+      <Parameter Name="horario" Mode="In" Type="Int32" />
+      <Parameter Name="hIngreso" Mode="In" Type="Time" />
+      <Parameter Name="hSalida" Mode="In" Type="Time" />
+      <Parameter Name="hora1" Mode="In" Type="Time" />
+      <Parameter Name="hora2" Mode="In" Type="Time" />
+      <Parameter Name="hora3" Mode="In" Type="Time" />
+      <Parameter Name="hora4" Mode="In" Type="Time" />
+      <Parameter Name="ingrTard" Mode="In" Type="Time" />
+      <Parameter Name="exeRefr" Mode="In" Type="Time" />
+      <Parameter Name="exeJornd" Mode="In" Type="Time" />
+      <Parameter Name="observ" Mode="In" Type="String" />
+      <Parameter Name="usu_UltMod" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ActualizarEmpleado">
+      <Parameter Name="codEmpleado" Mode="In" Type="Int32" />
+      <Parameter Name="numroDoc" Mode="In" Type="String" />
+      <Parameter Name="tipoDoc" Mode="In" Type="String" />
+      <Parameter Name="apellidos" Mode="In" Type="String" />
+      <Parameter Name="nombres" Mode="In" Type="String" />
+      <Parameter Name="fecNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="genero" Mode="In" Type="String" />
+      <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="direccion" Mode="In" Type="String" />
+      <Parameter Name="telefono" Mode="In" Type="Int32" />
+      <Parameter Name="fecIngreso" Mode="In" Type="DateTime" />
+      <Parameter Name="codCargo" Mode="In" Type="Int32" />
+      <Parameter Name="codArea" Mode="In" Type="Int32" />
+      <Parameter Name="codSede" Mode="In" Type="Int32" />
+      <Parameter Name="codHorario" Mode="In" Type="Int32" />
+      <Parameter Name="foto" Mode="In" Type="Binary" />
+      <Parameter Name="usu_UltMod" Mode="In" Type="String" />
+      <Parameter Name="estado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ActualizarHorario">
+      <Parameter Name="codHorario" Mode="In" Type="Int32" />
+      <Parameter Name="desHorario" Mode="In" Type="String" />
+      <Parameter Name="ingLUN" Mode="In" Type="Time" />
+      <Parameter Name="salLUN" Mode="In" Type="Time" />
+      <Parameter Name="ingMAR" Mode="In" Type="Time" />
+      <Parameter Name="salMAR" Mode="In" Type="Time" />
+      <Parameter Name="ingMIE" Mode="In" Type="Time" />
+      <Parameter Name="salMIE" Mode="In" Type="Time" />
+      <Parameter Name="ingJUE" Mode="In" Type="Time" />
+      <Parameter Name="salJUE" Mode="In" Type="Time" />
+      <Parameter Name="ingVIE" Mode="In" Type="Time" />
+      <Parameter Name="salVIE" Mode="In" Type="Time" />
+      <Parameter Name="ingSAB" Mode="In" Type="Time" />
+      <Parameter Name="salSAB" Mode="In" Type="Time" />
+      <Parameter Name="ingDOM" Mode="In" Type="Time" />
+      <Parameter Name="salDOM" Mode="In" Type="Time" />
+      <Parameter Name="refriger" Mode="In" Type="Int32" />
+      <Parameter Name="tolernc" Mode="In" Type="Int32" />
+      <Parameter Name="diaDesc" Mode="In" Type="Int32" />
+      <Parameter Name="usu_UltMod" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ActualizarMarca">
+      <Parameter Name="codMarc" Mode="In" Type="Int32" />
+      <Parameter Name="empleado" Mode="In" Type="Int32" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="hora" Mode="In" Type="Time" />
+      <Parameter Name="tipo" Mode="In" Type="Int32" />
+      <Parameter Name="usu_UltMod" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ActualizarUserSystem">
+      <Parameter Name="codUser" Mode="In" Type="Int32" />
+      <Parameter Name="nomUser" Mode="In" Type="String" />
+      <Parameter Name="passUser" Mode="In" Type="String" />
+      <Parameter Name="estdUser" Mode="In" Type="Int32" />
+      <Parameter Name="usu_UltMod" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarDiario" ReturnType="Collection(DreamFoam_DBModel.usp_ConsultarDiario_Result)">
+      <Parameter Name="codDiar" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarDiarioFecEmpl" ReturnType="Collection(DreamFoam_DBModel.usp_ConsultarDiarioFecEmpl_Result)">
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="empleado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarDocumento" ReturnType="Collection(DreamFoam_DBModel.usp_ConsultarDocumento_Result)">
+      <Parameter Name="codDoc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarEmpleado" ReturnType="Collection(DreamFoam_DBModel.usp_ConsultarEmpleado_Result)">
+      <Parameter Name="codEmpleado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarEmpleadoCodDoc" ReturnType="Collection(DreamFoam_DBModel.usp_ConsultarEmpleadoCodDoc_Result)">
+      <Parameter Name="codEmpleado" Mode="In" Type="Int32" />
+      <Parameter Name="numroDoc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarHorario" ReturnType="Collection(DreamFoam_DBModel.usp_ConsultarHorario_Result)">
+      <Parameter Name="codHorario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarMarca" ReturnType="Collection(DreamFoam_DBModel.usp_ConsultarMarca_Result)">
+      <Parameter Name="codMarc" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarUserSystem" ReturnType="Collection(DreamFoam_DBModel.usp_ConsultarUserSystem_Result)">
+      <Parameter Name="codUser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarUserSystemNom" ReturnType="Collection(DreamFoam_DBModel.usp_ConsultarUserSystemNom_Result)">
+      <Parameter Name="nomUser" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarDiario">
+      <Parameter Name="codDiar" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarEmpleado">
+      <Parameter Name="codEmpleado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarHorario">
+      <Parameter Name="codHorario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarMarca">
+      <Parameter Name="codMarc" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarUserSystem">
+      <Parameter Name="codUser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarDiario">
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="empleado" Mode="In" Type="Int32" />
+      <Parameter Name="horario" Mode="In" Type="Int32" />
+      <Parameter Name="hIngreso" Mode="In" Type="Time" />
+      <Parameter Name="hSalida" Mode="In" Type="Time" />
+      <Parameter Name="hora1" Mode="In" Type="Time" />
+      <Parameter Name="hora2" Mode="In" Type="Time" />
+      <Parameter Name="hora3" Mode="In" Type="Time" />
+      <Parameter Name="hora4" Mode="In" Type="Time" />
+      <Parameter Name="ingrTard" Mode="In" Type="Time" />
+      <Parameter Name="exeRefr" Mode="In" Type="Time" />
+      <Parameter Name="exeJornd" Mode="In" Type="Time" />
+      <Parameter Name="observ" Mode="In" Type="String" />
+      <Parameter Name="usu_Reg" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarEmpleado">
+      <Parameter Name="numroDoc" Mode="In" Type="String" />
+      <Parameter Name="tipoDoc" Mode="In" Type="String" />
+      <Parameter Name="apellidos" Mode="In" Type="String" />
+      <Parameter Name="nombres" Mode="In" Type="String" />
+      <Parameter Name="fecNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="genero" Mode="In" Type="String" />
+      <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="direccion" Mode="In" Type="String" />
+      <Parameter Name="telefono" Mode="In" Type="Int32" />
+      <Parameter Name="fecIngreso" Mode="In" Type="DateTime" />
+      <Parameter Name="codCargo" Mode="In" Type="Int32" />
+      <Parameter Name="codArea" Mode="In" Type="Int32" />
+      <Parameter Name="codSede" Mode="In" Type="Int32" />
+      <Parameter Name="codHorario" Mode="In" Type="Int32" />
+      <Parameter Name="foto" Mode="In" Type="Binary" />
+      <Parameter Name="usu_Reg" Mode="In" Type="String" />
+      <Parameter Name="estado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarHorario">
+      <Parameter Name="desHorario" Mode="In" Type="String" />
+      <Parameter Name="ingLUN" Mode="In" Type="Time" />
+      <Parameter Name="salLUN" Mode="In" Type="Time" />
+      <Parameter Name="ingMAR" Mode="In" Type="Time" />
+      <Parameter Name="salMAR" Mode="In" Type="Time" />
+      <Parameter Name="ingMIE" Mode="In" Type="Time" />
+      <Parameter Name="salMIE" Mode="In" Type="Time" />
+      <Parameter Name="ingJUE" Mode="In" Type="Time" />
+      <Parameter Name="salJUE" Mode="In" Type="Time" />
+      <Parameter Name="ingVIE" Mode="In" Type="Time" />
+      <Parameter Name="salVIE" Mode="In" Type="Time" />
+      <Parameter Name="ingSAB" Mode="In" Type="Time" />
+      <Parameter Name="salSAB" Mode="In" Type="Time" />
+      <Parameter Name="ingDOM" Mode="In" Type="Time" />
+      <Parameter Name="salDOM" Mode="In" Type="Time" />
+      <Parameter Name="refriger" Mode="In" Type="Int32" />
+      <Parameter Name="tolernc" Mode="In" Type="Int32" />
+      <Parameter Name="diaDesc" Mode="In" Type="Int32" />
+      <Parameter Name="usu_Reg" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarMarca">
+      <Parameter Name="empleado" Mode="In" Type="Int32" />
+      <Parameter Name="horario" Mode="In" Type="Int32" />
+      <Parameter Name="usu_Reg" Mode="In" Type="String" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="tipo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarUserSystem">
+      <Parameter Name="nomUser" Mode="In" Type="String" />
+      <Parameter Name="passUser" Mode="In" Type="String" />
+      <Parameter Name="estdUser" Mode="In" Type="Int32" />
+      <Parameter Name="fec_Reg" Mode="In" Type="DateTime" />
+      <Parameter Name="usu_Reg" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarArea" ReturnType="Collection(DreamFoam_DBModel.usp_ListarArea_Result)" />
+    <FunctionImport Name="usp_ListarCargo" ReturnType="Collection(DreamFoam_DBModel.usp_ListarCargo_Result)" />
+    <FunctionImport Name="usp_ListarDiario" ReturnType="Collection(DreamFoam_DBModel.usp_ListarDiario_Result)" />
+    <FunctionImport Name="usp_ListarDocumentos" ReturnType="Collection(DreamFoam_DBModel.usp_ListarDocumentos_Result)" />
+    <FunctionImport Name="usp_ListarEmpleados" ReturnType="Collection(DreamFoam_DBModel.usp_ListarEmpleados_Result)" />
+    <FunctionImport Name="usp_ListarHorarios" ReturnType="Collection(DreamFoam_DBModel.usp_ListarHorarios_Result)" />
+    <FunctionImport Name="usp_ListarMarcas" ReturnType="Collection(DreamFoam_DBModel.usp_ListarMarcas_Result)" />
+    <FunctionImport Name="usp_ListarSede" ReturnType="Collection(DreamFoam_DBModel.usp_ListarSede_Result)" />
+    <FunctionImport Name="usp_ListarUserSystem" ReturnType="Collection(DreamFoam_DBModel.usp_ListarUserSystem_Result)" />
+    <FunctionImport Name="usp_RegInserDiarioMarca">
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="empleado" Mode="In" Type="Int32" />
+      <Parameter Name="horario" Mode="In" Type="Int32" />
+      <Parameter Name="hora" Mode="In" Type="Time" />
+      <Parameter Name="tipo" Mode="In" Type="Int32" />
+      <Parameter Name="usu_UltMod" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ValidarUserSystem" ReturnType="Collection(DreamFoam_DBModel.usp_ValidarUserSystem_Result)">
+      <Parameter Name="nomUser" Mode="In" Type="String" />
+      <Parameter Name="passUser" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_DiarioMetrSumJor" ReturnType="Collection(Time)">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="fecIni" Mode="In" Type="DateTime" />
+      <Parameter Name="fecFin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="usp_DiarioMetrSumRef" ReturnType="Collection(Time)">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="fecIni" Mode="In" Type="DateTime" />
+      <Parameter Name="fecFin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="usp_DiarioMetrSumTard" ReturnType="Collection(Time)">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="fecIni" Mode="In" Type="DateTime" />
+      <Parameter Name="fecFin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="usp_ConsultarDiario_Result">
+    <Property Type="Int32" Name="codDiar" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" />
+    <Property Type="Int32" Name="empleado" Nullable="false" />
+    <Property Type="Int32" Name="horario" Nullable="false" />
+    <Property Type="Time" Name="hIngreso" Nullable="true" />
+    <Property Type="Time" Name="hSalida" Nullable="true" />
+    <Property Type="Time" Name="hora1" Nullable="true" />
+    <Property Type="Time" Name="hora2" Nullable="true" />
+    <Property Type="Time" Name="hora3" Nullable="true" />
+    <Property Type="Time" Name="hora4" Nullable="true" />
+    <Property Type="Time" Name="ingrTard" Nullable="true" />
+    <Property Type="Time" Name="exeRefr" Nullable="true" />
+    <Property Type="Time" Name="exeJornd" Nullable="true" />
+    <Property Type="String" Name="observ" Nullable="true" MaxLength="25" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarDiarioFecEmpl_Result">
+    <Property Type="Int32" Name="codDiar" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" />
+    <Property Type="Int32" Name="empleado" Nullable="false" />
+    <Property Type="Int32" Name="horario" Nullable="false" />
+    <Property Type="Time" Name="hIngreso" Nullable="true" />
+    <Property Type="Time" Name="hSalida" Nullable="true" />
+    <Property Type="Time" Name="hora1" Nullable="true" />
+    <Property Type="Time" Name="hora2" Nullable="true" />
+    <Property Type="Time" Name="hora3" Nullable="true" />
+    <Property Type="Time" Name="hora4" Nullable="true" />
+    <Property Type="Time" Name="ingrTard" Nullable="true" />
+    <Property Type="Time" Name="exeRefr" Nullable="true" />
+    <Property Type="Time" Name="exeJornd" Nullable="true" />
+    <Property Type="String" Name="observ" Nullable="true" MaxLength="25" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarDocumento_Result">
+    <Property Type="String" Name="codDoc" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="descrCorta" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="descrLarga" Nullable="false" MaxLength="70" />
+    <Property Type="Int32" Name="longitud" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarEmpleado_Result">
+    <Property Type="Int32" Name="codEmpleado" Nullable="false" />
+    <Property Type="String" Name="numroDoc" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="tipoDoc" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="apellidos" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombres" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fecNacimiento" Nullable="false" />
+    <Property Type="String" Name="genero" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="correo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="direccion" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="telefono" Nullable="true" />
+    <Property Type="DateTime" Name="fecIngreso" Nullable="false" />
+    <Property Type="Int32" Name="codCargo" Nullable="false" />
+    <Property Type="Int32" Name="codArea" Nullable="false" />
+    <Property Type="Int32" Name="codSede" Nullable="false" />
+    <Property Type="Int32" Name="codHorario" Nullable="false" />
+    <Property Type="Binary" Name="foto" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="estado" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarEmpleadoCodDoc_Result">
+    <Property Type="Int32" Name="codEmpleado" Nullable="false" />
+    <Property Type="String" Name="numroDoc" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="tipoDoc" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="apellidos" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombres" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fecNacimiento" Nullable="false" />
+    <Property Type="String" Name="genero" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="correo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="direccion" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="telefono" Nullable="true" />
+    <Property Type="DateTime" Name="fecIngreso" Nullable="false" />
+    <Property Type="Int32" Name="codCargo" Nullable="false" />
+    <Property Type="Int32" Name="codArea" Nullable="false" />
+    <Property Type="Int32" Name="codSede" Nullable="false" />
+    <Property Type="Int32" Name="codHorario" Nullable="false" />
+    <Property Type="Binary" Name="foto" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="estado" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarHorario_Result">
+    <Property Type="Int32" Name="codHorario" Nullable="false" />
+    <Property Type="String" Name="desHorario" Nullable="false" MaxLength="50" />
+    <Property Type="Time" Name="ingLUN" Nullable="true" />
+    <Property Type="Time" Name="salLUN" Nullable="true" />
+    <Property Type="Time" Name="ingMAR" Nullable="true" />
+    <Property Type="Time" Name="salMAR" Nullable="true" />
+    <Property Type="Time" Name="ingMIE" Nullable="true" />
+    <Property Type="Time" Name="salMIE" Nullable="true" />
+    <Property Type="Time" Name="ingJUE" Nullable="true" />
+    <Property Type="Time" Name="salJUE" Nullable="true" />
+    <Property Type="Time" Name="ingVIE" Nullable="true" />
+    <Property Type="Time" Name="salVIE" Nullable="true" />
+    <Property Type="Time" Name="ingSAB" Nullable="true" />
+    <Property Type="Time" Name="salSAB" Nullable="true" />
+    <Property Type="Time" Name="ingDOM" Nullable="true" />
+    <Property Type="Time" Name="salDOM" Nullable="true" />
+    <Property Type="Int32" Name="refriger" Nullable="false" />
+    <Property Type="Int32" Name="tolernc" Nullable="false" />
+    <Property Type="Int32" Name="diaDesc" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarMarca_Result">
+    <Property Type="Int32" Name="codMarc" Nullable="false" />
+    <Property Type="Int32" Name="empleado" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
+    <Property Type="Time" Name="hora" Nullable="false" />
+    <Property Type="Int32" Name="tipo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarUserSystem_Result">
+    <Property Type="Int32" Name="codUser" Nullable="false" />
+    <Property Type="String" Name="nomUser" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="passUser" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="estdUser" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarUserSystemNom_Result">
+    <Property Type="Int32" Name="codUser" Nullable="false" />
+    <Property Type="String" Name="nomUser" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="passUser" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="estdUser" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarArea_Result">
+    <Property Type="Int32" Name="codArea" Nullable="false" />
+    <Property Type="String" Name="nomArea" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarCargo_Result">
+    <Property Type="Int32" Name="codCargo" Nullable="false" />
+    <Property Type="String" Name="nomCargo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarDiario_Result">
+    <Property Type="Int32" Name="codDiar" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" />
+    <Property Type="Int32" Name="empleado" Nullable="false" />
+    <Property Type="Int32" Name="horario" Nullable="false" />
+    <Property Type="Time" Name="hIngreso" Nullable="true" />
+    <Property Type="Time" Name="hSalida" Nullable="true" />
+    <Property Type="Time" Name="hora1" Nullable="true" />
+    <Property Type="Time" Name="hora2" Nullable="true" />
+    <Property Type="Time" Name="hora3" Nullable="true" />
+    <Property Type="Time" Name="hora4" Nullable="true" />
+    <Property Type="Time" Name="ingrTard" Nullable="true" />
+    <Property Type="Time" Name="exeRefr" Nullable="true" />
+    <Property Type="Time" Name="exeJornd" Nullable="true" />
+    <Property Type="String" Name="observ" Nullable="true" MaxLength="25" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarDocumentos_Result">
+    <Property Type="String" Name="codDoc" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="descrCorta" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="descrLarga" Nullable="false" MaxLength="70" />
+    <Property Type="Int32" Name="longitud" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarEmpleados_Result">
+    <Property Type="Int32" Name="codEmpleado" Nullable="false" />
+    <Property Type="String" Name="numroDoc" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="tipoDoc" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="apellidos" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombres" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fecNacimiento" Nullable="false" />
+    <Property Type="String" Name="genero" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="correo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="direccion" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="telefono" Nullable="true" />
+    <Property Type="DateTime" Name="fecIngreso" Nullable="false" />
+    <Property Type="Int32" Name="codCargo" Nullable="false" />
+    <Property Type="Int32" Name="codArea" Nullable="false" />
+    <Property Type="Int32" Name="codSede" Nullable="false" />
+    <Property Type="Int32" Name="codHorario" Nullable="false" />
+    <Property Type="Binary" Name="foto" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="estado" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarHorarios_Result">
+    <Property Type="Int32" Name="codHorario" Nullable="false" />
+    <Property Type="String" Name="desHorario" Nullable="false" MaxLength="50" />
+    <Property Type="Time" Name="ingLUN" Nullable="true" />
+    <Property Type="Time" Name="salLUN" Nullable="true" />
+    <Property Type="Time" Name="ingMAR" Nullable="true" />
+    <Property Type="Time" Name="salMAR" Nullable="true" />
+    <Property Type="Time" Name="ingMIE" Nullable="true" />
+    <Property Type="Time" Name="salMIE" Nullable="true" />
+    <Property Type="Time" Name="ingJUE" Nullable="true" />
+    <Property Type="Time" Name="salJUE" Nullable="true" />
+    <Property Type="Time" Name="ingVIE" Nullable="true" />
+    <Property Type="Time" Name="salVIE" Nullable="true" />
+    <Property Type="Time" Name="ingSAB" Nullable="true" />
+    <Property Type="Time" Name="salSAB" Nullable="true" />
+    <Property Type="Time" Name="ingDOM" Nullable="true" />
+    <Property Type="Time" Name="salDOM" Nullable="true" />
+    <Property Type="Int32" Name="refriger" Nullable="false" />
+    <Property Type="Int32" Name="tolernc" Nullable="false" />
+    <Property Type="Int32" Name="diaDesc" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarMarcas_Result">
+    <Property Type="Int32" Name="codMarc" Nullable="false" />
+    <Property Type="Int32" Name="empleado" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
+    <Property Type="Time" Name="hora" Nullable="false" />
+    <Property Type="Int32" Name="tipo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarSede_Result">
+    <Property Type="Int32" Name="codSede" Nullable="false" />
+    <Property Type="String" Name="nomSede" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="direccion" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarUserSystem_Result">
+    <Property Type="Int32" Name="codUser" Nullable="false" />
+    <Property Type="String" Name="nomUser" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="passUser" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="estdUser" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_ValidarUserSystem_Result">
+    <Property Type="Int32" Name="codUser" Nullable="false" />
+    <Property Type="String" Name="nomUser" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="passUser" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="estdUser" Nullable="false" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,12 @@
+D:\ISIL\2023-2\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\bin\Debug\ProyDreamFoam_BE.dll
+D:\ISIL\2023-2\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\bin\Debug\ProyDreamFoam_BE.pdb
+D:\ISIL\2023-2\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\obj\Debug\ProyDreamFoam_BE.csproj.AssemblyReference.cache
+D:\ISIL\2023-2\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\obj\Debug\ProyDreamFoam_BE.csproj.CoreCompileInputs.cache
+D:\ISIL\2023-2\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\obj\Debug\ProyDreamFoam_BE.dll
+D:\ISIL\2023-2\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\obj\Debug\ProyDreamFoam_BE.pdb
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Proyect\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\bin\Debug\ProyDreamFoam_BE.dll
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Proyect\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\bin\Debug\ProyDreamFoam_BE.pdb
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Proyect\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\obj\Debug\ProyDreamFoam_BE.csproj.AssemblyReference.cache
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Proyect\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\obj\Debug\ProyDreamFoam_BE.csproj.CoreCompileInputs.cache
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Proyect\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\obj\Debug\ProyDreamFoam_BE.dll
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Proyect\DreamFoamSystem\DreamFoamSystemWEB\ProyDreamFoam_BE\obj\Debug\ProyDreamFoam_BE.pdb

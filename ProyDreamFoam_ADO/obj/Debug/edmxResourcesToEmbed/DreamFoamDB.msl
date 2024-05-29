@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DreamFoam_DBModelStoreContainer" CdmEntityContainer="DreamFoam_DBEntities">
+    <EntitySetMapping Name="Tb_Area">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_Area">
+        <MappingFragment StoreEntitySet="Tb_Area">
+          <ScalarProperty Name="codArea" ColumnName="codArea" />
+          <ScalarProperty Name="nomArea" ColumnName="nomArea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Calendario2024">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_Calendario2024">
+        <MappingFragment StoreEntitySet="Tb_Calendario2024">
+          <ScalarProperty Name="codCal" ColumnName="codCal" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Cargo">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_Cargo">
+        <MappingFragment StoreEntitySet="Tb_Cargo">
+          <ScalarProperty Name="codCargo" ColumnName="codCargo" />
+          <ScalarProperty Name="nomCargo" ColumnName="nomCargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Diario">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_Diario">
+        <MappingFragment StoreEntitySet="Tb_Diario">
+          <ScalarProperty Name="codDiar" ColumnName="codDiar" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="empleado" ColumnName="empleado" />
+          <ScalarProperty Name="horario" ColumnName="horario" />
+          <ScalarProperty Name="hIngreso" ColumnName="hIngreso" />
+          <ScalarProperty Name="hSalida" ColumnName="hSalida" />
+          <ScalarProperty Name="hora1" ColumnName="hora1" />
+          <ScalarProperty Name="hora2" ColumnName="hora2" />
+          <ScalarProperty Name="hora3" ColumnName="hora3" />
+          <ScalarProperty Name="hora4" ColumnName="hora4" />
+          <ScalarProperty Name="ingrTard" ColumnName="ingrTard" />
+          <ScalarProperty Name="exeRefr" ColumnName="exeRefr" />
+          <ScalarProperty Name="exeJornd" ColumnName="exeJornd" />
+          <ScalarProperty Name="observ" ColumnName="observ" />
+          <ScalarProperty Name="fec_Reg" ColumnName="fec_Reg" />
+          <ScalarProperty Name="usu_Reg" ColumnName="usu_Reg" />
+          <ScalarProperty Name="fec_UltMod" ColumnName="fec_UltMod" />
+          <ScalarProperty Name="usu_UltMod" ColumnName="usu_UltMod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Documento">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_Documento">
+        <MappingFragment StoreEntitySet="Tb_Documento">
+          <ScalarProperty Name="codDoc" ColumnName="codDoc" />
+          <ScalarProperty Name="descrCorta" ColumnName="descrCorta" />
+          <ScalarProperty Name="descrLarga" ColumnName="descrLarga" />
+          <ScalarProperty Name="longitud" ColumnName="longitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Empleado">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_Empleado">
+        <MappingFragment StoreEntitySet="Tb_Empleado">
+          <ScalarProperty Name="codEmpleado" ColumnName="codEmpleado" />
+          <ScalarProperty Name="numroDoc" ColumnName="numroDoc" />
+          <ScalarProperty Name="tipoDoc" ColumnName="tipoDoc" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="fecNacimiento" ColumnName="fecNacimiento" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fecIngreso" ColumnName="fecIngreso" />
+          <ScalarProperty Name="codCargo" ColumnName="codCargo" />
+          <ScalarProperty Name="codArea" ColumnName="codArea" />
+          <ScalarProperty Name="codSede" ColumnName="codSede" />
+          <ScalarProperty Name="codHorario" ColumnName="codHorario" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="fec_Reg" ColumnName="fec_Reg" />
+          <ScalarProperty Name="usu_Reg" ColumnName="usu_Reg" />
+          <ScalarProperty Name="fec_UltMod" ColumnName="fec_UltMod" />
+          <ScalarProperty Name="usu_UltMod" ColumnName="usu_UltMod" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Feriados">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_Feriados">
+        <MappingFragment StoreEntitySet="Tb_Feriados">
+          <ScalarProperty Name="codFeriado" ColumnName="codFeriado" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="descrip" ColumnName="descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Horario">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_Horario">
+        <MappingFragment StoreEntitySet="Tb_Horario">
+          <ScalarProperty Name="codHorario" ColumnName="codHorario" />
+          <ScalarProperty Name="desHorario" ColumnName="desHorario" />
+          <ScalarProperty Name="ingLUN" ColumnName="ingLUN" />
+          <ScalarProperty Name="salLUN" ColumnName="salLUN" />
+          <ScalarProperty Name="ingMAR" ColumnName="ingMAR" />
+          <ScalarProperty Name="salMAR" ColumnName="salMAR" />
+          <ScalarProperty Name="ingMIE" ColumnName="ingMIE" />
+          <ScalarProperty Name="salMIE" ColumnName="salMIE" />
+          <ScalarProperty Name="ingJUE" ColumnName="ingJUE" />
+          <ScalarProperty Name="salJUE" ColumnName="salJUE" />
+          <ScalarProperty Name="ingVIE" ColumnName="ingVIE" />
+          <ScalarProperty Name="salVIE" ColumnName="salVIE" />
+          <ScalarProperty Name="ingSAB" ColumnName="ingSAB" />
+          <ScalarProperty Name="salSAB" ColumnName="salSAB" />
+          <ScalarProperty Name="ingDOM" ColumnName="ingDOM" />
+          <ScalarProperty Name="salDOM" ColumnName="salDOM" />
+          <ScalarProperty Name="refriger" ColumnName="refriger" />
+          <ScalarProperty Name="tolernc" ColumnName="tolernc" />
+          <ScalarProperty Name="diaDesc" ColumnName="diaDesc" />
+          <ScalarProperty Name="fec_Reg" ColumnName="fec_Reg" />
+          <ScalarProperty Name="usu_Reg" ColumnName="usu_Reg" />
+          <ScalarProperty Name="fec_UltMod" ColumnName="fec_UltMod" />
+          <ScalarProperty Name="usu_UltMod" ColumnName="usu_UltMod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Marcas">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_Marcas">
+        <MappingFragment StoreEntitySet="Tb_Marcas">
+          <ScalarProperty Name="codMarc" ColumnName="codMarc" />
+          <ScalarProperty Name="empleado" ColumnName="empleado" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="fec_Reg" ColumnName="fec_Reg" />
+          <ScalarProperty Name="usu_Reg" ColumnName="usu_Reg" />
+          <ScalarProperty Name="fec_UltMod" ColumnName="fec_UltMod" />
+          <ScalarProperty Name="usu_UltMod" ColumnName="usu_UltMod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Sede">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_Sede">
+        <MappingFragment StoreEntitySet="Tb_Sede">
+          <ScalarProperty Name="codSede" ColumnName="codSede" />
+          <ScalarProperty Name="nomSede" ColumnName="nomSede" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_UserSystem">
+      <EntityTypeMapping TypeName="DreamFoam_DBModel.Tb_UserSystem">
+        <MappingFragment StoreEntitySet="Tb_UserSystem">
+          <ScalarProperty Name="codUser" ColumnName="codUser" />
+          <ScalarProperty Name="nomUser" ColumnName="nomUser" />
+          <ScalarProperty Name="passUser" ColumnName="passUser" />
+          <ScalarProperty Name="estdUser" ColumnName="estdUser" />
+          <ScalarProperty Name="fec_Reg" ColumnName="fec_Reg" />
+          <ScalarProperty Name="usu_Reg" ColumnName="usu_Reg" />
+          <ScalarProperty Name="fec_UltMod" ColumnName="fec_UltMod" />
+          <ScalarProperty Name="usu_UltMod" ColumnName="usu_UltMod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarDiario" FunctionName="DreamFoam_DBModel.Store.usp_ActualizarDiario" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarEmpleado" FunctionName="DreamFoam_DBModel.Store.usp_ActualizarEmpleado" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarHorario" FunctionName="DreamFoam_DBModel.Store.usp_ActualizarHorario" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarMarca" FunctionName="DreamFoam_DBModel.Store.usp_ActualizarMarca" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarUserSystem" FunctionName="DreamFoam_DBModel.Store.usp_ActualizarUserSystem" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarDiario" FunctionName="DreamFoam_DBModel.Store.usp_ConsultarDiario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ConsultarDiario_Result">
+          <ScalarProperty Name="codDiar" ColumnName="codDiar" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="empleado" ColumnName="empleado" />
+          <ScalarProperty Name="horario" ColumnName="horario" />
+          <ScalarProperty Name="hIngreso" ColumnName="hIngreso" />
+          <ScalarProperty Name="hSalida" ColumnName="hSalida" />
+          <ScalarProperty Name="hora1" ColumnName="hora1" />
+          <ScalarProperty Name="hora2" ColumnName="hora2" />
+          <ScalarProperty Name="hora3" ColumnName="hora3" />
+          <ScalarProperty Name="hora4" ColumnName="hora4" />
+          <ScalarProperty Name="ingrTard" ColumnName="ingrTard" />
+          <ScalarProperty Name="exeRefr" ColumnName="exeRefr" />
+          <ScalarProperty Name="exeJornd" ColumnName="exeJornd" />
+          <ScalarProperty Name="observ" ColumnName="observ" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarDiarioFecEmpl" FunctionName="DreamFoam_DBModel.Store.usp_ConsultarDiarioFecEmpl">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ConsultarDiarioFecEmpl_Result">
+          <ScalarProperty Name="codDiar" ColumnName="codDiar" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="empleado" ColumnName="empleado" />
+          <ScalarProperty Name="horario" ColumnName="horario" />
+          <ScalarProperty Name="hIngreso" ColumnName="hIngreso" />
+          <ScalarProperty Name="hSalida" ColumnName="hSalida" />
+          <ScalarProperty Name="hora1" ColumnName="hora1" />
+          <ScalarProperty Name="hora2" ColumnName="hora2" />
+          <ScalarProperty Name="hora3" ColumnName="hora3" />
+          <ScalarProperty Name="hora4" ColumnName="hora4" />
+          <ScalarProperty Name="ingrTard" ColumnName="ingrTard" />
+          <ScalarProperty Name="exeRefr" ColumnName="exeRefr" />
+          <ScalarProperty Name="exeJornd" ColumnName="exeJornd" />
+          <ScalarProperty Name="observ" ColumnName="observ" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarDocumento" FunctionName="DreamFoam_DBModel.Store.usp_ConsultarDocumento">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ConsultarDocumento_Result">
+          <ScalarProperty Name="codDoc" ColumnName="codDoc" />
+          <ScalarProperty Name="descrCorta" ColumnName="descrCorta" />
+          <ScalarProperty Name="descrLarga" ColumnName="descrLarga" />
+          <ScalarProperty Name="longitud" ColumnName="longitud" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarEmpleado" FunctionName="DreamFoam_DBModel.Store.usp_ConsultarEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ConsultarEmpleado_Result">
+          <ScalarProperty Name="codEmpleado" ColumnName="codEmpleado" />
+          <ScalarProperty Name="numroDoc" ColumnName="numroDoc" />
+          <ScalarProperty Name="tipoDoc" ColumnName="tipoDoc" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="fecNacimiento" ColumnName="fecNacimiento" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fecIngreso" ColumnName="fecIngreso" />
+          <ScalarProperty Name="codCargo" ColumnName="codCargo" />
+          <ScalarProperty Name="codArea" ColumnName="codArea" />
+          <ScalarProperty Name="codSede" ColumnName="codSede" />
+          <ScalarProperty Name="codHorario" ColumnName="codHorario" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarEmpleadoCodDoc" FunctionName="DreamFoam_DBModel.Store.usp_ConsultarEmpleadoCodDoc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ConsultarEmpleadoCodDoc_Result">
+          <ScalarProperty Name="codEmpleado" ColumnName="codEmpleado" />
+          <ScalarProperty Name="numroDoc" ColumnName="numroDoc" />
+          <ScalarProperty Name="tipoDoc" ColumnName="tipoDoc" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="fecNacimiento" ColumnName="fecNacimiento" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fecIngreso" ColumnName="fecIngreso" />
+          <ScalarProperty Name="codCargo" ColumnName="codCargo" />
+          <ScalarProperty Name="codArea" ColumnName="codArea" />
+          <ScalarProperty Name="codSede" ColumnName="codSede" />
+          <ScalarProperty Name="codHorario" ColumnName="codHorario" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarHorario" FunctionName="DreamFoam_DBModel.Store.usp_ConsultarHorario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ConsultarHorario_Result">
+          <ScalarProperty Name="codHorario" ColumnName="codHorario" />
+          <ScalarProperty Name="desHorario" ColumnName="desHorario" />
+          <ScalarProperty Name="ingLUN" ColumnName="ingLUN" />
+          <ScalarProperty Name="salLUN" ColumnName="salLUN" />
+          <ScalarProperty Name="ingMAR" ColumnName="ingMAR" />
+          <ScalarProperty Name="salMAR" ColumnName="salMAR" />
+          <ScalarProperty Name="ingMIE" ColumnName="ingMIE" />
+          <ScalarProperty Name="salMIE" ColumnName="salMIE" />
+          <ScalarProperty Name="ingJUE" ColumnName="ingJUE" />
+          <ScalarProperty Name="salJUE" ColumnName="salJUE" />
+          <ScalarProperty Name="ingVIE" ColumnName="ingVIE" />
+          <ScalarProperty Name="salVIE" ColumnName="salVIE" />
+          <ScalarProperty Name="ingSAB" ColumnName="ingSAB" />
+          <ScalarProperty Name="salSAB" ColumnName="salSAB" />
+          <ScalarProperty Name="ingDOM" ColumnName="ingDOM" />
+          <ScalarProperty Name="salDOM" ColumnName="salDOM" />
+          <ScalarProperty Name="refriger" ColumnName="refriger" />
+          <ScalarProperty Name="tolernc" ColumnName="tolernc" />
+          <ScalarProperty Name="diaDesc" ColumnName="diaDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarMarca" FunctionName="DreamFoam_DBModel.Store.usp_ConsultarMarca">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ConsultarMarca_Result">
+          <ScalarProperty Name="codMarc" ColumnName="codMarc" />
+          <ScalarProperty Name="empleado" ColumnName="empleado" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarUserSystem" FunctionName="DreamFoam_DBModel.Store.usp_ConsultarUserSystem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ConsultarUserSystem_Result">
+          <ScalarProperty Name="codUser" ColumnName="codUser" />
+          <ScalarProperty Name="nomUser" ColumnName="nomUser" />
+          <ScalarProperty Name="passUser" ColumnName="passUser" />
+          <ScalarProperty Name="estdUser" ColumnName="estdUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarUserSystemNom" FunctionName="DreamFoam_DBModel.Store.usp_ConsultarUserSystemNom">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ConsultarUserSystemNom_Result">
+          <ScalarProperty Name="codUser" ColumnName="codUser" />
+          <ScalarProperty Name="nomUser" ColumnName="nomUser" />
+          <ScalarProperty Name="passUser" ColumnName="passUser" />
+          <ScalarProperty Name="estdUser" ColumnName="estdUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarDiario" FunctionName="DreamFoam_DBModel.Store.usp_EliminarDiario" />
+    <FunctionImportMapping FunctionImportName="usp_EliminarEmpleado" FunctionName="DreamFoam_DBModel.Store.usp_EliminarEmpleado" />
+    <FunctionImportMapping FunctionImportName="usp_EliminarHorario" FunctionName="DreamFoam_DBModel.Store.usp_EliminarHorario" />
+    <FunctionImportMapping FunctionImportName="usp_EliminarMarca" FunctionName="DreamFoam_DBModel.Store.usp_EliminarMarca" />
+    <FunctionImportMapping FunctionImportName="usp_EliminarUserSystem" FunctionName="DreamFoam_DBModel.Store.usp_EliminarUserSystem" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarDiario" FunctionName="DreamFoam_DBModel.Store.usp_InsertarDiario" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarEmpleado" FunctionName="DreamFoam_DBModel.Store.usp_InsertarEmpleado" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarHorario" FunctionName="DreamFoam_DBModel.Store.usp_InsertarHorario" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarMarca" FunctionName="DreamFoam_DBModel.Store.usp_InsertarMarca" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarUserSystem" FunctionName="DreamFoam_DBModel.Store.usp_InsertarUserSystem" />
+    <FunctionImportMapping FunctionImportName="usp_ListarArea" FunctionName="DreamFoam_DBModel.Store.usp_ListarArea">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ListarArea_Result">
+          <ScalarProperty Name="codArea" ColumnName="codArea" />
+          <ScalarProperty Name="nomArea" ColumnName="nomArea" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarCargo" FunctionName="DreamFoam_DBModel.Store.usp_ListarCargo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ListarCargo_Result">
+          <ScalarProperty Name="codCargo" ColumnName="codCargo" />
+          <ScalarProperty Name="nomCargo" ColumnName="nomCargo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarDiario" FunctionName="DreamFoam_DBModel.Store.usp_ListarDiario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ListarDiario_Result">
+          <ScalarProperty Name="codDiar" ColumnName="codDiar" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="empleado" ColumnName="empleado" />
+          <ScalarProperty Name="horario" ColumnName="horario" />
+          <ScalarProperty Name="hIngreso" ColumnName="hIngreso" />
+          <ScalarProperty Name="hSalida" ColumnName="hSalida" />
+          <ScalarProperty Name="hora1" ColumnName="hora1" />
+          <ScalarProperty Name="hora2" ColumnName="hora2" />
+          <ScalarProperty Name="hora3" ColumnName="hora3" />
+          <ScalarProperty Name="hora4" ColumnName="hora4" />
+          <ScalarProperty Name="ingrTard" ColumnName="ingrTard" />
+          <ScalarProperty Name="exeRefr" ColumnName="exeRefr" />
+          <ScalarProperty Name="exeJornd" ColumnName="exeJornd" />
+          <ScalarProperty Name="observ" ColumnName="observ" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarDocumentos" FunctionName="DreamFoam_DBModel.Store.usp_ListarDocumentos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ListarDocumentos_Result">
+          <ScalarProperty Name="codDoc" ColumnName="codDoc" />
+          <ScalarProperty Name="descrCorta" ColumnName="descrCorta" />
+          <ScalarProperty Name="descrLarga" ColumnName="descrLarga" />
+          <ScalarProperty Name="longitud" ColumnName="longitud" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarEmpleados" FunctionName="DreamFoam_DBModel.Store.usp_ListarEmpleados">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ListarEmpleados_Result">
+          <ScalarProperty Name="codEmpleado" ColumnName="codEmpleado" />
+          <ScalarProperty Name="numroDoc" ColumnName="numroDoc" />
+          <ScalarProperty Name="tipoDoc" ColumnName="tipoDoc" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="fecNacimiento" ColumnName="fecNacimiento" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fecIngreso" ColumnName="fecIngreso" />
+          <ScalarProperty Name="codCargo" ColumnName="codCargo" />
+          <ScalarProperty Name="codArea" ColumnName="codArea" />
+          <ScalarProperty Name="codSede" ColumnName="codSede" />
+          <ScalarProperty Name="codHorario" ColumnName="codHorario" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarHorarios" FunctionName="DreamFoam_DBModel.Store.usp_ListarHorarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ListarHorarios_Result">
+          <ScalarProperty Name="codHorario" ColumnName="codHorario" />
+          <ScalarProperty Name="desHorario" ColumnName="desHorario" />
+          <ScalarProperty Name="ingLUN" ColumnName="ingLUN" />
+          <ScalarProperty Name="salLUN" ColumnName="salLUN" />
+          <ScalarProperty Name="ingMAR" ColumnName="ingMAR" />
+          <ScalarProperty Name="salMAR" ColumnName="salMAR" />
+          <ScalarProperty Name="ingMIE" ColumnName="ingMIE" />
+          <ScalarProperty Name="salMIE" ColumnName="salMIE" />
+          <ScalarProperty Name="ingJUE" ColumnName="ingJUE" />
+          <ScalarProperty Name="salJUE" ColumnName="salJUE" />
+          <ScalarProperty Name="ingVIE" ColumnName="ingVIE" />
+          <ScalarProperty Name="salVIE" ColumnName="salVIE" />
+          <ScalarProperty Name="ingSAB" ColumnName="ingSAB" />
+          <ScalarProperty Name="salSAB" ColumnName="salSAB" />
+          <ScalarProperty Name="ingDOM" ColumnName="ingDOM" />
+          <ScalarProperty Name="salDOM" ColumnName="salDOM" />
+          <ScalarProperty Name="refriger" ColumnName="refriger" />
+          <ScalarProperty Name="tolernc" ColumnName="tolernc" />
+          <ScalarProperty Name="diaDesc" ColumnName="diaDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarMarcas" FunctionName="DreamFoam_DBModel.Store.usp_ListarMarcas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ListarMarcas_Result">
+          <ScalarProperty Name="codMarc" ColumnName="codMarc" />
+          <ScalarProperty Name="empleado" ColumnName="empleado" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarSede" FunctionName="DreamFoam_DBModel.Store.usp_ListarSede">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ListarSede_Result">
+          <ScalarProperty Name="codSede" ColumnName="codSede" />
+          <ScalarProperty Name="nomSede" ColumnName="nomSede" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarUserSystem" FunctionName="DreamFoam_DBModel.Store.usp_ListarUserSystem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ListarUserSystem_Result">
+          <ScalarProperty Name="codUser" ColumnName="codUser" />
+          <ScalarProperty Name="nomUser" ColumnName="nomUser" />
+          <ScalarProperty Name="passUser" ColumnName="passUser" />
+          <ScalarProperty Name="estdUser" ColumnName="estdUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_RegInserDiarioMarca" FunctionName="DreamFoam_DBModel.Store.usp_RegInserDiarioMarca" />
+    <FunctionImportMapping FunctionImportName="usp_ValidarUserSystem" FunctionName="DreamFoam_DBModel.Store.usp_ValidarUserSystem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DreamFoam_DBModel.usp_ValidarUserSystem_Result">
+          <ScalarProperty Name="codUser" ColumnName="codUser" />
+          <ScalarProperty Name="nomUser" ColumnName="nomUser" />
+          <ScalarProperty Name="passUser" ColumnName="passUser" />
+          <ScalarProperty Name="estdUser" ColumnName="estdUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_DiarioMetrSumJor" FunctionName="DreamFoam_DBModel.Store.usp_DiarioMetrSumJor" />
+    <FunctionImportMapping FunctionImportName="usp_DiarioMetrSumRef" FunctionName="DreamFoam_DBModel.Store.usp_DiarioMetrSumRef" />
+    <FunctionImportMapping FunctionImportName="usp_DiarioMetrSumTard" FunctionName="DreamFoam_DBModel.Store.usp_DiarioMetrSumTard" />
+  </EntityContainerMapping>
+</Mapping>

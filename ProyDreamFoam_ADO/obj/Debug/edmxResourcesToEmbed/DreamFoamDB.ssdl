@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DreamFoam_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tb_Area">
+    <Key>
+      <PropertyRef Name="codArea" />
+    </Key>
+    <Property Name="codArea" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomArea" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Tb_Calendario2024">
+    <Key>
+      <PropertyRef Name="codCal" />
+    </Key>
+    <Property Name="codCal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Cargo">
+    <Key>
+      <PropertyRef Name="codCargo" />
+    </Key>
+    <Property Name="codCargo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomCargo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Tb_Diario">
+    <Key>
+      <PropertyRef Name="codDiar" />
+    </Key>
+    <Property Name="codDiar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="empleado" Type="int" Nullable="false" />
+    <Property Name="horario" Type="int" Nullable="false" />
+    <Property Name="hIngreso" Type="time" Precision="7" />
+    <Property Name="hSalida" Type="time" Precision="7" />
+    <Property Name="hora1" Type="time" Precision="7" />
+    <Property Name="hora2" Type="time" Precision="7" />
+    <Property Name="hora3" Type="time" Precision="7" />
+    <Property Name="hora4" Type="time" Precision="7" />
+    <Property Name="ingrTard" Type="time" Precision="7" />
+    <Property Name="exeRefr" Type="time" Precision="7" />
+    <Property Name="exeJornd" Type="time" Precision="7" />
+    <Property Name="observ" Type="varchar" MaxLength="25" />
+    <Property Name="fec_Reg" Type="datetime" />
+    <Property Name="usu_Reg" Type="varchar" MaxLength="20" />
+    <Property Name="fec_UltMod" Type="datetime" />
+    <Property Name="usu_UltMod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_Documento">
+    <Key>
+      <PropertyRef Name="codDoc" />
+    </Key>
+    <Property Name="codDoc" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="descrCorta" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="descrLarga" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="longitud" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Empleado">
+    <Key>
+      <PropertyRef Name="codEmpleado" />
+    </Key>
+    <Property Name="codEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numroDoc" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="tipoDoc" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="apellidos" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombres" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fecNacimiento" Type="date" Nullable="false" />
+    <Property Name="genero" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="correo" Type="nvarchar" MaxLength="150" />
+    <Property Name="direccion" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="telefono" Type="int" />
+    <Property Name="fecIngreso" Type="date" Nullable="false" />
+    <Property Name="codCargo" Type="int" Nullable="false" />
+    <Property Name="codArea" Type="int" Nullable="false" />
+    <Property Name="codSede" Type="int" Nullable="false" />
+    <Property Name="codHorario" Type="int" Nullable="false" />
+    <Property Name="foto" Type="image" />
+    <Property Name="fec_Reg" Type="datetime" />
+    <Property Name="usu_Reg" Type="varchar" MaxLength="20" />
+    <Property Name="fec_UltMod" Type="datetime" />
+    <Property Name="usu_UltMod" Type="varchar" MaxLength="20" />
+    <Property Name="estado" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_Feriados">
+    <Key>
+      <PropertyRef Name="codFeriado" />
+    </Key>
+    <Property Name="codFeriado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="descrip" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tb_Horario">
+    <Key>
+      <PropertyRef Name="codHorario" />
+    </Key>
+    <Property Name="codHorario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="desHorario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ingLUN" Type="time" Precision="7" />
+    <Property Name="salLUN" Type="time" Precision="7" />
+    <Property Name="ingMAR" Type="time" Precision="7" />
+    <Property Name="salMAR" Type="time" Precision="7" />
+    <Property Name="ingMIE" Type="time" Precision="7" />
+    <Property Name="salMIE" Type="time" Precision="7" />
+    <Property Name="ingJUE" Type="time" Precision="7" />
+    <Property Name="salJUE" Type="time" Precision="7" />
+    <Property Name="ingVIE" Type="time" Precision="7" />
+    <Property Name="salVIE" Type="time" Precision="7" />
+    <Property Name="ingSAB" Type="time" Precision="7" />
+    <Property Name="salSAB" Type="time" Precision="7" />
+    <Property Name="ingDOM" Type="time" Precision="7" />
+    <Property Name="salDOM" Type="time" Precision="7" />
+    <Property Name="refriger" Type="int" Nullable="false" />
+    <Property Name="tolernc" Type="int" Nullable="false" />
+    <Property Name="diaDesc" Type="int" Nullable="false" />
+    <Property Name="fec_Reg" Type="datetime" />
+    <Property Name="usu_Reg" Type="varchar" MaxLength="20" />
+    <Property Name="fec_UltMod" Type="datetime" />
+    <Property Name="usu_UltMod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_Marcas">
+    <Key>
+      <PropertyRef Name="codMarc" />
+    </Key>
+    <Property Name="codMarc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="empleado" Type="int" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="hora" Type="time" Precision="7" Nullable="false" />
+    <Property Name="tipo" Type="int" />
+    <Property Name="fec_Reg" Type="datetime" />
+    <Property Name="usu_Reg" Type="varchar" MaxLength="20" />
+    <Property Name="fec_UltMod" Type="datetime" />
+    <Property Name="usu_UltMod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_Sede">
+    <Key>
+      <PropertyRef Name="codSede" />
+    </Key>
+    <Property Name="codSede" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomSede" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_UserSystem">
+    <Key>
+      <PropertyRef Name="codUser" />
+    </Key>
+    <Property Name="codUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="passUser" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="estdUser" Type="int" Nullable="false" />
+    <Property Name="fec_Reg" Type="datetime" />
+    <Property Name="usu_Reg" Type="varchar" MaxLength="20" />
+    <Property Name="fec_UltMod" Type="datetime" />
+    <Property Name="usu_UltMod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__Tb_Diario__emple__4CA06362">
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="1" />
+    <End Role="Tb_Diario" Type="Self.Tb_Diario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Empleado">
+        <PropertyRef Name="codEmpleado" />
+      </Principal>
+      <Dependent Role="Tb_Diario">
+        <PropertyRef Name="empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Emplea__codAr__44FF419A">
+    <End Role="Tb_Area" Type="Self.Tb_Area" Multiplicity="1" />
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Area">
+        <PropertyRef Name="codArea" />
+      </Principal>
+      <Dependent Role="Tb_Empleado">
+        <PropertyRef Name="codArea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Emplea__codCa__440B1D61">
+    <End Role="Tb_Cargo" Type="Self.Tb_Cargo" Multiplicity="1" />
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Cargo">
+        <PropertyRef Name="codCargo" />
+      </Principal>
+      <Dependent Role="Tb_Empleado">
+        <PropertyRef Name="codCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Emplea__codHo__46E78A0C">
+    <End Role="Tb_Horario" Type="Self.Tb_Horario" Multiplicity="1" />
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Horario">
+        <PropertyRef Name="codHorario" />
+      </Principal>
+      <Dependent Role="Tb_Empleado">
+        <PropertyRef Name="codHorario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Emplea__codSe__45F365D3">
+    <End Role="Tb_Sede" Type="Self.Tb_Sede" Multiplicity="1" />
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sede">
+        <PropertyRef Name="codSede" />
+      </Principal>
+      <Dependent Role="Tb_Empleado">
+        <PropertyRef Name="codSede" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Emplea__tipoD__4316F928">
+    <End Role="Tb_Documento" Type="Self.Tb_Documento" Multiplicity="1" />
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Documento">
+        <PropertyRef Name="codDoc" />
+      </Principal>
+      <Dependent Role="Tb_Empleado">
+        <PropertyRef Name="tipoDoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Marcas__emple__49C3F6B7">
+    <End Role="Tb_Empleado" Type="Self.Tb_Empleado" Multiplicity="1" />
+    <End Role="Tb_Marcas" Type="Self.Tb_Marcas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Empleado">
+        <PropertyRef Name="codEmpleado" />
+      </Principal>
+      <Dependent Role="Tb_Marcas">
+        <PropertyRef Name="empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_ActualizarDiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codDiar" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+    <Parameter Name="empleado" Type="int" Mode="In" />
+    <Parameter Name="horario" Type="int" Mode="In" />
+    <Parameter Name="hIngreso" Type="time" Mode="In" />
+    <Parameter Name="hSalida" Type="time" Mode="In" />
+    <Parameter Name="hora1" Type="time" Mode="In" />
+    <Parameter Name="hora2" Type="time" Mode="In" />
+    <Parameter Name="hora3" Type="time" Mode="In" />
+    <Parameter Name="hora4" Type="time" Mode="In" />
+    <Parameter Name="ingrTard" Type="time" Mode="In" />
+    <Parameter Name="exeRefr" Type="time" Mode="In" />
+    <Parameter Name="exeJornd" Type="time" Mode="In" />
+    <Parameter Name="observ" Type="varchar" Mode="In" />
+    <Parameter Name="usu_UltMod" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmpleado" Type="int" Mode="In" />
+    <Parameter Name="numroDoc" Type="nvarchar" Mode="In" />
+    <Parameter Name="tipoDoc" Type="nvarchar" Mode="In" />
+    <Parameter Name="apellidos" Type="nvarchar" Mode="In" />
+    <Parameter Name="nombres" Type="nvarchar" Mode="In" />
+    <Parameter Name="fecNacimiento" Type="date" Mode="In" />
+    <Parameter Name="genero" Type="nvarchar" Mode="In" />
+    <Parameter Name="correo" Type="nvarchar" Mode="In" />
+    <Parameter Name="direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="telefono" Type="int" Mode="In" />
+    <Parameter Name="fecIngreso" Type="date" Mode="In" />
+    <Parameter Name="codCargo" Type="int" Mode="In" />
+    <Parameter Name="codArea" Type="int" Mode="In" />
+    <Parameter Name="codSede" Type="int" Mode="In" />
+    <Parameter Name="codHorario" Type="int" Mode="In" />
+    <Parameter Name="foto" Type="image" Mode="In" />
+    <Parameter Name="usu_UltMod" Type="varchar" Mode="In" />
+    <Parameter Name="estado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarHorario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codHorario" Type="int" Mode="In" />
+    <Parameter Name="desHorario" Type="varchar" Mode="In" />
+    <Parameter Name="ingLUN" Type="time" Mode="In" />
+    <Parameter Name="salLUN" Type="time" Mode="In" />
+    <Parameter Name="ingMAR" Type="time" Mode="In" />
+    <Parameter Name="salMAR" Type="time" Mode="In" />
+    <Parameter Name="ingMIE" Type="time" Mode="In" />
+    <Parameter Name="salMIE" Type="time" Mode="In" />
+    <Parameter Name="ingJUE" Type="time" Mode="In" />
+    <Parameter Name="salJUE" Type="time" Mode="In" />
+    <Parameter Name="ingVIE" Type="time" Mode="In" />
+    <Parameter Name="salVIE" Type="time" Mode="In" />
+    <Parameter Name="ingSAB" Type="time" Mode="In" />
+    <Parameter Name="salSAB" Type="time" Mode="In" />
+    <Parameter Name="ingDOM" Type="time" Mode="In" />
+    <Parameter Name="salDOM" Type="time" Mode="In" />
+    <Parameter Name="refriger" Type="int" Mode="In" />
+    <Parameter Name="tolernc" Type="int" Mode="In" />
+    <Parameter Name="diaDesc" Type="int" Mode="In" />
+    <Parameter Name="usu_UltMod" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codMarc" Type="int" Mode="In" />
+    <Parameter Name="empleado" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+    <Parameter Name="hora" Type="time" Mode="In" />
+    <Parameter Name="tipo" Type="int" Mode="In" />
+    <Parameter Name="usu_UltMod" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarUserSystem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codUser" Type="int" Mode="In" />
+    <Parameter Name="nomUser" Type="varchar" Mode="In" />
+    <Parameter Name="passUser" Type="varchar" Mode="In" />
+    <Parameter Name="estdUser" Type="int" Mode="In" />
+    <Parameter Name="usu_UltMod" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarDiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codDiar" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarDiarioFecEmpl" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fecha" Type="date" Mode="In" />
+    <Parameter Name="empleado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarDocumento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codDoc" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmpleado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarEmpleadoCodDoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmpleado" Type="int" Mode="In" />
+    <Parameter Name="numroDoc" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarHorario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codHorario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codMarc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarUserSystem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codUser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarUserSystemNom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nomUser" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_DiarioMetrSumJor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="fecIni" Type="datetime" Mode="In" />
+    <Parameter Name="fecFin" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="usp_DiarioMetrSumRef" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="fecIni" Type="datetime" Mode="In" />
+    <Parameter Name="fecFin" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="usp_DiarioMetrSumTard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="fecIni" Type="datetime" Mode="In" />
+    <Parameter Name="fecFin" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarDiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codDiar" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmpleado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarHorario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codHorario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codMarc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarUserSystem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codUser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarDiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fecha" Type="date" Mode="In" />
+    <Parameter Name="empleado" Type="int" Mode="In" />
+    <Parameter Name="horario" Type="int" Mode="In" />
+    <Parameter Name="hIngreso" Type="time" Mode="In" />
+    <Parameter Name="hSalida" Type="time" Mode="In" />
+    <Parameter Name="hora1" Type="time" Mode="In" />
+    <Parameter Name="hora2" Type="time" Mode="In" />
+    <Parameter Name="hora3" Type="time" Mode="In" />
+    <Parameter Name="hora4" Type="time" Mode="In" />
+    <Parameter Name="ingrTard" Type="time" Mode="In" />
+    <Parameter Name="exeRefr" Type="time" Mode="In" />
+    <Parameter Name="exeJornd" Type="time" Mode="In" />
+    <Parameter Name="observ" Type="varchar" Mode="In" />
+    <Parameter Name="usu_Reg" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numroDoc" Type="nvarchar" Mode="In" />
+    <Parameter Name="tipoDoc" Type="nvarchar" Mode="In" />
+    <Parameter Name="apellidos" Type="nvarchar" Mode="In" />
+    <Parameter Name="nombres" Type="nvarchar" Mode="In" />
+    <Parameter Name="fecNacimiento" Type="date" Mode="In" />
+    <Parameter Name="genero" Type="nvarchar" Mode="In" />
+    <Parameter Name="correo" Type="nvarchar" Mode="In" />
+    <Parameter Name="direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="telefono" Type="int" Mode="In" />
+    <Parameter Name="fecIngreso" Type="date" Mode="In" />
+    <Parameter Name="codCargo" Type="int" Mode="In" />
+    <Parameter Name="codArea" Type="int" Mode="In" />
+    <Parameter Name="codSede" Type="int" Mode="In" />
+    <Parameter Name="codHorario" Type="int" Mode="In" />
+    <Parameter Name="foto" Type="image" Mode="In" />
+    <Parameter Name="usu_Reg" Type="varchar" Mode="In" />
+    <Parameter Name="estado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarHorario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="desHorario" Type="varchar" Mode="In" />
+    <Parameter Name="ingLUN" Type="time" Mode="In" />
+    <Parameter Name="salLUN" Type="time" Mode="In" />
+    <Parameter Name="ingMAR" Type="time" Mode="In" />
+    <Parameter Name="salMAR" Type="time" Mode="In" />
+    <Parameter Name="ingMIE" Type="time" Mode="In" />
+    <Parameter Name="salMIE" Type="time" Mode="In" />
+    <Parameter Name="ingJUE" Type="time" Mode="In" />
+    <Parameter Name="salJUE" Type="time" Mode="In" />
+    <Parameter Name="ingVIE" Type="time" Mode="In" />
+    <Parameter Name="salVIE" Type="time" Mode="In" />
+    <Parameter Name="ingSAB" Type="time" Mode="In" />
+    <Parameter Name="salSAB" Type="time" Mode="In" />
+    <Parameter Name="ingDOM" Type="time" Mode="In" />
+    <Parameter Name="salDOM" Type="time" Mode="In" />
+    <Parameter Name="refriger" Type="int" Mode="In" />
+    <Parameter Name="tolernc" Type="int" Mode="In" />
+    <Parameter Name="diaDesc" Type="int" Mode="In" />
+    <Parameter Name="usu_Reg" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="empleado" Type="int" Mode="In" />
+    <Parameter Name="horario" Type="int" Mode="In" />
+    <Parameter Name="usu_Reg" Type="varchar" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+    <Parameter Name="tipo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarUserSystem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nomUser" Type="varchar" Mode="In" />
+    <Parameter Name="passUser" Type="varchar" Mode="In" />
+    <Parameter Name="estdUser" Type="int" Mode="In" />
+    <Parameter Name="fec_Reg" Type="datetime" Mode="In" />
+    <Parameter Name="usu_Reg" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ListarArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarDiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarDocumentos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarEmpleados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarHorarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarMarcas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarSede" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarUserSystem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_RegInserDiarioMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fecha" Type="date" Mode="In" />
+    <Parameter Name="empleado" Type="int" Mode="In" />
+    <Parameter Name="horario" Type="int" Mode="In" />
+    <Parameter Name="hora" Type="time" Mode="In" />
+    <Parameter Name="tipo" Type="int" Mode="In" />
+    <Parameter Name="usu_UltMod" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ValidarUserSystem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nomUser" Type="varchar" Mode="In" />
+    <Parameter Name="passUser" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DreamFoam_DBModelStoreContainer">
+    <EntitySet Name="Tb_Area" EntityType="Self.Tb_Area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Calendario2024" EntityType="Self.Tb_Calendario2024" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Cargo" EntityType="Self.Tb_Cargo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Diario" EntityType="Self.Tb_Diario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Documento" EntityType="Self.Tb_Documento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Empleado" EntityType="Self.Tb_Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Feriados" EntityType="Self.Tb_Feriados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Horario" EntityType="Self.Tb_Horario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Marcas" EntityType="Self.Tb_Marcas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Sede" EntityType="Self.Tb_Sede" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_UserSystem" EntityType="Self.Tb_UserSystem" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Tb_Diario__emple__4CA06362" Association="Self.FK__Tb_Diario__emple__4CA06362">
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+      <End Role="Tb_Diario" EntitySet="Tb_Diario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Emplea__codAr__44FF419A" Association="Self.FK__Tb_Emplea__codAr__44FF419A">
+      <End Role="Tb_Area" EntitySet="Tb_Area" />
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Emplea__codCa__440B1D61" Association="Self.FK__Tb_Emplea__codCa__440B1D61">
+      <End Role="Tb_Cargo" EntitySet="Tb_Cargo" />
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Emplea__codHo__46E78A0C" Association="Self.FK__Tb_Emplea__codHo__46E78A0C">
+      <End Role="Tb_Horario" EntitySet="Tb_Horario" />
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Emplea__codSe__45F365D3" Association="Self.FK__Tb_Emplea__codSe__45F365D3">
+      <End Role="Tb_Sede" EntitySet="Tb_Sede" />
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Emplea__tipoD__4316F928" Association="Self.FK__Tb_Emplea__tipoD__4316F928">
+      <End Role="Tb_Documento" EntitySet="Tb_Documento" />
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Marcas__emple__49C3F6B7" Association="Self.FK__Tb_Marcas__emple__49C3F6B7">
+      <End Role="Tb_Empleado" EntitySet="Tb_Empleado" />
+      <End Role="Tb_Marcas" EntitySet="Tb_Marcas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
